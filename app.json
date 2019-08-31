@@ -1,0 +1,21 @@
+{
+  "name": "Jawiku",
+  "displayName": "Jawiku",
+  "expo": {
+    "name": "Jawiku",
+    "slug": "smart-jawiku",
+    "icon": "./images/HomeScreen/image1.jpg",
+    "privacy": "unlisted",
+    "sdkVersion": "34.0.0",
+    "version": "1.0.0",
+    "entryPoint": "node_modules/expo/AppEntry.js",
+    "platforms": [
+      "android",
+      "web"
+    ],
+    "description": "smart jawiku app"
+  },
+  "android": {
+    "package": "com.jawiku.smartjawiku"
+  }
+}
