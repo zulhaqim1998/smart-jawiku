@@ -24,9 +24,6 @@ class Slide5Menu extends React.Component {
                         <View style={styles.buttonWrapper}><Text style={styles.text}>Video 2</Text><AntDesign style={styles.icon} name="playcircleo" size={32} color="white" /></View>
 
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button}>
-                        <View style={styles.buttonWrapper}><Text style={styles.text}>Video 3</Text><AntDesign style={styles.icon} name="playcircleo" size={32} color="white" /></View>
-                    </TouchableOpacity>
                 </ImageBackground>
             </View>
         );

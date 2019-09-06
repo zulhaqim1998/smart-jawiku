@@ -92,7 +92,7 @@ class Slide11Screen extends React.Component {
 
 const rowData = [
     [{label: "ڤ", answer: 4}, {label: "چ", answer: 3}],
-    [{label: "ڠ", answer: 33}, {label: "ڽ", answer: 3}]
+    [{label: "ڠ", answer: 3}, {label: "ڽ", answer: 3}]
 ];
 
 export default Slide11Screen;

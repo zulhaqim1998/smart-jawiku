@@ -6,18 +6,36 @@ import {
 } from 'react-native';
 
 import RNSketchCanvas from '@terrylinla/react-native-sketch-canvas';
+import { SketchCanvas } from '@terrylinla/react-native-sketch-canvas';
 
 export default class Slide12Screen extends Component {
+    static navigationOptions = {
+        title: 'Slide 12',
+    };
+
     render() {
         return (
             <View style={styles.container}>
+                <Text style={{fontSize: 16}}>Warnakan huruf mengikut warna yang ditetapkan.</Text>
                 <View style={{ flex: 1, flexDirection: 'row' }}>
                     <RNSketchCanvas
+                        localSourceImage={{
+                            filename: 'slide12.png',  // e.g. 'image.png' or '/storage/sdcard0/Pictures/image.png'
+                            directory: RNSketchCanvas.MAIN_BUNDLE, // e.g. SketchCanvas.MAIN_BUNDLE or '/storage/sdcard0/Pictures/'
+                            // mode: 'AspectFit'
+                        }}
+                        ref={ref => this.canvas = ref}
+                        style={{ flex: 1 }}
+
                         containerStyle={{ backgroundColor: 'transparent', flex: 1 }}
                         canvasStyle={{ backgroundColor: 'transparent', flex: 1 }}
+                        defaultStrokeWidth={15}
+                        // strokeColors={[{color: 'black'}, {color: 'red'}, {color: 'orange'}, {color: 'yellow'},
+                        //     {color: 'green'}, {color: 'blue'}, {color: 'purple'}, {color: 'skyblue'}, {color: 'maroon'},
+                        //     {color: 'silver'}]}
                         defaultStrokeIndex={0}
-                        defaultStrokeWidth={5}
-                        closeComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Close</Text></View>}
+
+                        // closeComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Close</Text></View>}
                         undoComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Undo</Text></View>}
                         clearComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Clear</Text></View>}
                         eraseComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Eraser</Text></View>}
@@ -37,15 +55,15 @@ export default class Slide12Screen extends Component {
                                     }} />
                                 </View>
                             )}}
-                        saveComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Save</Text></View>}
-                        savePreference={() => {
-                            return {
-                                folder: 'RNSketchCanvas',
-                                filename: String(Math.ceil(Math.random() * 100000000)),
-                                transparent: false,
-                                imageType: 'png'
-                            }
-                        }}
+                        // saveComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Save</Text></View>}
+                        // savePreference={() => {
+                        //     return {
+                        //         folder: 'RNSketchCanvas',
+                        //         filename: String(Math.ceil(Math.random() * 100000000)),
+                        //         transparent: false,
+                        //         imageType: 'png'
+                        //     }
+                        // }}
                     />
                 </View>
             </View>

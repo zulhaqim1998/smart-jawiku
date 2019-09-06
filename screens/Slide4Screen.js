@@ -19,6 +19,12 @@ class Slide4Screen extends React.Component {
         const soundObject = new Audio.Sound();
     }
 
+    componentWillUnmount() {
+        if(this.state.soundObject) {
+            this.state.soundObject.stopAsync();
+        }
+    }
+
     render() {
 
         return (
@@ -29,15 +35,19 @@ class Slide4Screen extends React.Component {
                 <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center'}}>
                     <View style={{flex: 1, margin: 5}}>
                         <Button style={{flex: 1}} title="Play audio" onPress={async() => {
-                    const soundObject = new Audio.Sound();
-                    try {
-                        await soundObject.loadAsync(require('jawiku/audio/slide4-audio.mp3'));
-                        await soundObject.playAsync();
-                        this.setState({soundObject});
-                        // Your sound is playing!
-                    } catch (error) {
-                        console.log("error playing sound");
-                    }
+                            if(!this.state.soundObject) {
+                                const soundObject = new Audio.Sound();
+                                try {
+                                    await soundObject.loadAsync(require('jawiku/audio/slide4-audio.mp3'));
+                                    await soundObject.playAsync();
+                                    this.setState({soundObject});
+                                    // Your sound is playing!
+                                } catch (error) {
+                                    console.log("error playing sound");
+                                }
+                            } else {
+                                this.state.soundObject.playAsync();
+                            }
                     }} />
                     </View>
                     <View style={{flex: 1, margin: 5}}>

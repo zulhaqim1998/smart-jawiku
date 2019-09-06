@@ -50,16 +50,28 @@ class HomeScreen extends React.Component {
                                 onPress={() => navigate('Slide6Menu')}
                             />
                             <CustomButton
-                                title="Slide 7"
+                                title="Latihan Pengukuhan"
                                 onPress={() => navigate('Slide7')}
                             />
                             <CustomButton
-                                title="Slide 9"
+                                title="Tulis Huruf"
+                                onPress={() => navigate('Slide8')}
+                            />
+                            <CustomButton
+                                title="Ayuh Isi!"
                                 onPress={() => navigate('Slide9')}
                             />
                             <CustomButton
-                                title="Slide 11"
+                                title="Padankan"
+                                onPress={() => navigate('Slide10')}
+                            />
+                            <CustomButton
+                                title="Jom Kira!"
                                 onPress={() => navigate('Slide11')}
+                            />
+                            <CustomButton
+                                title="Padankan"
+                                onPress={() => navigate('Slide12')}
                             />
                         </View>
                     </ScrollView>

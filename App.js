@@ -13,6 +13,8 @@ import Slide7Screen from "./screens/Slide7Screen";
 import Slide9Screen from "./screens/Slide9Screen";
 import Slide11Screen from "./screens/Slide11Screen";
 import Slide12Screen from "./screens/Slide12Screen";
+import Slide10Screen from "./screens/Slide10Screen";
+import Slide8Screen from "./screens/Slide8Screen";
 
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -30,11 +32,13 @@ const MainNavigator = createStackNavigator({
     Slide5Video: {screen: Slide5Video},
     Slide6Menu: {screen: Slide6Menu},
     Slide7: {screen: Slide7Screen},
+    Slide8: {screen: Slide8Screen},
     Slide9: {screen: Slide9Screen},
+    Slide10: {screen: Slide10Screen},
     Slide11: {screen: Slide11Screen},
     Slide12: {screen: Slide12Screen}
 }, {
-    initialRouteName: 'Slide12',
+    initialRouteName: 'Home',
     headerLayoutPreset: 'center',
     // defaultNavigationOptions: {
     //   headerTintColor: '#fff',

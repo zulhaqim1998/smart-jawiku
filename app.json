@@ -1,21 +1,32 @@
 {
-  "name": "Jawiku",
-  "displayName": "Jawiku",
   "expo": {
     "name": "Jawiku",
     "slug": "smart-jawiku",
-    "icon": "./images/HomeScreen/image1.jpg",
+    "icon": "images/HomeScreen/image1.jpg",
     "privacy": "unlisted",
     "sdkVersion": "34.0.0",
     "version": "1.0.0",
     "entryPoint": "node_modules/expo/AppEntry.js",
+    "updates": { "enabled": false },
+    "assetBundlePatterns": [
+      "images/*",
+      "video/*",
+      "audio/*"
+    ],
     "platforms": [
       "android",
       "web"
     ],
-    "description": "smart jawiku app"
-  },
-  "android": {
-    "package": "com.jawiku.smartjawiku"
+    "description": "smart jawiku app",
+    "isDetached": true,
+    "detach": {
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.12.2-sdk34.0.0-767c7d3b-87b6-4f80-a9af-92ce67e2a49d.tar.gz"
+    },
+    "scheme": "expcab50a8d98034881a5b192f3504dd465",
+    "android": {
+      "package": "com.jawiku.smartjawiku",
+      "publishBundlePath": "android\\app\\src\\main\\assets\\shell-app.bundle",
+      "publishManifestPath": "android\\app\\src\\main\\assets\\shell-app-manifest.json"
+    }
   }
 }
